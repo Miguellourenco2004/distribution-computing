@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MathConsumerService" targetNamespace="http://default_package/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://default_package/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://default_package/" schemaLocation="mathconsumer_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="marcarConsultaResponse">
+    <wsdl:part name="parameters" element="tns:marcarConsultaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="marcarConsulta">
+    <wsdl:part name="parameters" element="tns:marcarConsulta">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarClinicasFunctionResponse">
+    <wsdl:part name="parameters" element="tns:listarClinicasFunctionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarClinicasFunction">
+    <wsdl:part name="parameters" element="tns:listarClinicasFunction">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasFunctionResponse">
+    <wsdl:part name="parameters" element="tns:listarConsultasFunctionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasFunction">
+    <wsdl:part name="parameters" element="tns:listarConsultasFunction">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MathConsumer">
+    <wsdl:operation name="listarClinicasFunction">
+      <wsdl:input name="listarClinicasFunction" message="tns:listarClinicasFunction">
+    </wsdl:input>
+      <wsdl:output name="listarClinicasFunctionResponse" message="tns:listarClinicasFunctionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasFunction">
+      <wsdl:input name="listarConsultasFunction" message="tns:listarConsultasFunction">
+    </wsdl:input>
+      <wsdl:output name="listarConsultasFunctionResponse" message="tns:listarConsultasFunctionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsulta">
+      <wsdl:input name="marcarConsulta" message="tns:marcarConsulta">
+    </wsdl:input>
+      <wsdl:output name="marcarConsultaResponse" message="tns:marcarConsultaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MathConsumerServiceSoapBinding" type="tns:MathConsumer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="listarClinicasFunction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarClinicasFunction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarClinicasFunctionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasFunction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarConsultasFunction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarConsultasFunctionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsulta">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="marcarConsulta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="marcarConsultaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MathConsumerService">
+    <wsdl:port name="MathConsumerPort" binding="tns:MathConsumerServiceSoapBinding">
+      <soap:address location="http://localhost:9090/MathConsumerPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

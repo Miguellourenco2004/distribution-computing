@@ -1,0 +1,204 @@
+<xs:schema xmlns:tns="http://default_package/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://default_package/" version="1.0">
+
+  <xs:element name="addIntegers" type="tns:addIntegers"/>
+
+  <xs:element name="addIntegersResponse" type="tns:addIntegersResponse"/>
+
+  <xs:element name="cancelarConsultaPorUsuario" type="tns:cancelarConsultaPorUsuario"/>
+
+  <xs:element name="cancelarConsultaPorUsuarioResponse" type="tns:cancelarConsultaPorUsuarioResponse"/>
+
+  <xs:element name="criarPaciente" type="tns:criarPaciente"/>
+
+  <xs:element name="criarPacienteResponse" type="tns:criarPacienteResponse"/>
+
+  <xs:element name="factorial" type="tns:factorial"/>
+
+  <xs:element name="factorialResponse" type="tns:factorialResponse"/>
+
+  <xs:element name="listarClinicas" type="tns:listarClinicas"/>
+
+  <xs:element name="listarClinicasResponse" type="tns:listarClinicasResponse"/>
+
+  <xs:element name="listarConsultasPaciente" type="tns:listarConsultasPaciente"/>
+
+  <xs:element name="listarConsultasPacienteResponse" type="tns:listarConsultasPacienteResponse"/>
+
+  <xs:element name="loginUtilizador" type="tns:loginUtilizador"/>
+
+  <xs:element name="loginUtilizadorResponse" type="tns:loginUtilizadorResponse"/>
+
+  <xs:element name="marcarConsulta" type="tns:marcarConsulta"/>
+
+  <xs:element name="marcarConsultaResponse" type="tns:marcarConsultaResponse"/>
+
+  <xs:element name="obterIdUtilizador" type="tns:obterIdUtilizador"/>
+
+  <xs:element name="obterIdUtilizadorResponse" type="tns:obterIdUtilizadorResponse"/>
+
+  <xs:element name="queryAuthServerTest" type="tns:queryAuthServerTest"/>
+
+  <xs:element name="queryAuthServerTestResponse" type="tns:queryAuthServerTestResponse"/>
+
+  <xs:element name="queryDatabase" type="tns:queryDatabase"/>
+
+  <xs:element name="queryDatabaseResponse" type="tns:queryDatabaseResponse"/>
+
+  <xs:element name="registarUtilizador" type="tns:registarUtilizador"/>
+
+  <xs:element name="registarUtilizadorResponse" type="tns:registarUtilizadorResponse"/>
+
+  <xs:complexType name="listarClinicas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarClinicasResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="factorial">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="factorialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelarConsultaPorUsuario">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelarConsultaPorUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="registarUtilizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="registarUtilizadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="loginUtilizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="loginUtilizadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryAuthServerTest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="queryAuthServerTestResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addIntegers">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addIntegersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criarPaciente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element name="arg2" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criarPacienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarConsultasPaciente">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarConsultasPacienteResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="marcarConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element name="arg4" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="marcarConsultaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obterIdUtilizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obterIdUtilizadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryDatabase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryDatabaseResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

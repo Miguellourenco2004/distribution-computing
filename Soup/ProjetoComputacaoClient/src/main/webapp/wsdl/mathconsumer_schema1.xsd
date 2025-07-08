@@ -1,0 +1,53 @@
+<xs:schema xmlns:tns="http://default_package/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://default_package/" version="1.0">
+
+  <xs:element name="listarClinicasFunction" type="tns:listarClinicasFunction"/>
+
+  <xs:element name="listarClinicasFunctionResponse" type="tns:listarClinicasFunctionResponse"/>
+
+  <xs:element name="listarConsultasFunction" type="tns:listarConsultasFunction"/>
+
+  <xs:element name="listarConsultasFunctionResponse" type="tns:listarConsultasFunctionResponse"/>
+
+  <xs:element name="marcarConsulta" type="tns:marcarConsulta"/>
+
+  <xs:element name="marcarConsultaResponse" type="tns:marcarConsultaResponse"/>
+
+  <xs:complexType name="listarClinicasFunction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarClinicasFunctionResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarConsultasFunction">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listarConsultasFunctionResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="marcarConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="marcarConsultaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

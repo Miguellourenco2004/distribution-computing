@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MathUtilityService" targetNamespace="http://default_package/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://default_package/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://default_package/" schemaLocation="mathutility_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="listarClinicas">
+    <wsdl:part name="parameters" element="tns:listarClinicas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="factorialResponse">
+    <wsdl:part name="parameters" element="tns:factorialResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginUtilizadorResponse">
+    <wsdl:part name="parameters" element="tns:loginUtilizadorResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAuthServerTestResponse">
+    <wsdl:part name="parameters" element="tns:queryAuthServerTestResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarPacienteResponse">
+    <wsdl:part name="parameters" element="tns:criarPacienteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="factorial">
+    <wsdl:part name="parameters" element="tns:factorial">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarClinicasResponse">
+    <wsdl:part name="parameters" element="tns:listarClinicasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelarConsultaPorUsuario">
+    <wsdl:part name="parameters" element="tns:cancelarConsultaPorUsuario">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registarUtilizador">
+    <wsdl:part name="parameters" element="tns:registarUtilizador">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginUtilizador">
+    <wsdl:part name="parameters" element="tns:loginUtilizador">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAuthServerTest">
+    <wsdl:part name="parameters" element="tns:queryAuthServerTest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registarUtilizadorResponse">
+    <wsdl:part name="parameters" element="tns:registarUtilizadorResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addIntegers">
+    <wsdl:part name="parameters" element="tns:addIntegers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarPaciente">
+    <wsdl:part name="parameters" element="tns:criarPaciente">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasPaciente">
+    <wsdl:part name="parameters" element="tns:listarConsultasPaciente">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="marcarConsultaResponse">
+    <wsdl:part name="parameters" element="tns:marcarConsultaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasPacienteResponse">
+    <wsdl:part name="parameters" element="tns:listarConsultasPacienteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="marcarConsulta">
+    <wsdl:part name="parameters" element="tns:marcarConsulta">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addIntegersResponse">
+    <wsdl:part name="parameters" element="tns:addIntegersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterIdUtilizador">
+    <wsdl:part name="parameters" element="tns:obterIdUtilizador">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryDatabaseResponse">
+    <wsdl:part name="parameters" element="tns:queryDatabaseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterIdUtilizadorResponse">
+    <wsdl:part name="parameters" element="tns:obterIdUtilizadorResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryDatabase">
+    <wsdl:part name="parameters" element="tns:queryDatabase">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelarConsultaPorUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:cancelarConsultaPorUsuarioResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MathUtility">
+    <wsdl:operation name="listarClinicas">
+      <wsdl:input name="listarClinicas" message="tns:listarClinicas">
+    </wsdl:input>
+      <wsdl:output name="listarClinicasResponse" message="tns:listarClinicasResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <wsdl:input name="factorial" message="tns:factorial">
+    </wsdl:input>
+      <wsdl:output name="factorialResponse" message="tns:factorialResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarConsultaPorUsuario">
+      <wsdl:input name="cancelarConsultaPorUsuario" message="tns:cancelarConsultaPorUsuario">
+    </wsdl:input>
+      <wsdl:output name="cancelarConsultaPorUsuarioResponse" message="tns:cancelarConsultaPorUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registarUtilizador">
+      <wsdl:input name="registarUtilizador" message="tns:registarUtilizador">
+    </wsdl:input>
+      <wsdl:output name="registarUtilizadorResponse" message="tns:registarUtilizadorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUtilizador">
+      <wsdl:input name="loginUtilizador" message="tns:loginUtilizador">
+    </wsdl:input>
+      <wsdl:output name="loginUtilizadorResponse" message="tns:loginUtilizadorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAuthServerTest">
+      <wsdl:input name="queryAuthServerTest" message="tns:queryAuthServerTest">
+    </wsdl:input>
+      <wsdl:output name="queryAuthServerTestResponse" message="tns:queryAuthServerTestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIntegers">
+      <wsdl:input name="addIntegers" message="tns:addIntegers">
+    </wsdl:input>
+      <wsdl:output name="addIntegersResponse" message="tns:addIntegersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="criarPaciente">
+      <wsdl:input name="criarPaciente" message="tns:criarPaciente">
+    </wsdl:input>
+      <wsdl:output name="criarPacienteResponse" message="tns:criarPacienteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasPaciente">
+      <wsdl:input name="listarConsultasPaciente" message="tns:listarConsultasPaciente">
+    </wsdl:input>
+      <wsdl:output name="listarConsultasPacienteResponse" message="tns:listarConsultasPacienteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsulta">
+      <wsdl:input name="marcarConsulta" message="tns:marcarConsulta">
+    </wsdl:input>
+      <wsdl:output name="marcarConsultaResponse" message="tns:marcarConsultaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterIdUtilizador">
+      <wsdl:input name="obterIdUtilizador" message="tns:obterIdUtilizador">
+    </wsdl:input>
+      <wsdl:output name="obterIdUtilizadorResponse" message="tns:obterIdUtilizadorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryDatabase">
+      <wsdl:input name="queryDatabase" message="tns:queryDatabase">
+    </wsdl:input>
+      <wsdl:output name="queryDatabaseResponse" message="tns:queryDatabaseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MathUtilityServiceSoapBinding" type="tns:MathUtility">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="listarClinicas">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarClinicas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarClinicasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="factorial">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="factorialResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarConsultaPorUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelarConsultaPorUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarConsultaPorUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registarUtilizador">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registarUtilizador">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registarUtilizadorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUtilizador">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="loginUtilizador">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginUtilizadorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAuthServerTest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryAuthServerTest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryAuthServerTestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIntegers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addIntegers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addIntegersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="criarPaciente">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="criarPaciente">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="criarPacienteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasPaciente">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarConsultasPaciente">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarConsultasPacienteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsulta">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="marcarConsulta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="marcarConsultaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterIdUtilizador">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="obterIdUtilizador">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obterIdUtilizadorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryDatabase">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryDatabase">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryDatabaseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MathUtilityService">
+    <wsdl:port name="MathUtilityPort" binding="tns:MathUtilityServiceSoapBinding">
+      <soap:address location="http://localhost:8080/ProjetoComputacao/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
